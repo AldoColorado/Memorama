@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="Memorama.Vistas.ChatLayout"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Memorama.Vistas"
+        mc:Ignorable="d"
+        >
+    <Grid Background="Aqua">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="31"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0">
+            <Label Name="Title" Content="Conectado" Background="#686868" Foreground="White" HorizontalContentAlignment="Right" Margin="1"></Label>
+        </Grid>
+        <Grid Grid.Row="1" Background="Beige">
+            <ScrollViewer Name="ContentScroller" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Background="Gray">
+                <ItemsControl Name="MessageTemplate">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="5" Background="{Binding ItemBackground}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="32"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <StackPanel Orientation="Horizontal" Background="{Binding HeaderBackground}">
+                                        <Label Content="{Binding Name}" HorizontalAlignment="left"></Label>
+                                        <Label Content="{Binding SentTime}" HorizontalAlignment="Right"></Label>
+                                    </StackPanel>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label HorizontalContentAlignment="Right" HorizontalAlignment="Right" Content="{Binding mensajeEnviado}"></Label>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Grid>
+        <Grid Grid.Row="2" Background="#2B2C2E">
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="ContenidoMensaje" Background="#585858" Width="200" TextWrapping="Wrap" AcceptsReturn="True" Margin="10"></TextBox>
+                <Button x:Name="Enviar" Content="Enviar" Margin="20" HorizontalAlignment="Right" Background="Black" Foreground="White"></Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>
