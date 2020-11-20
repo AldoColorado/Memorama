@@ -24,6 +24,11 @@ namespace Memorama.ModelosDeVista
 
         }
 
+        public void VerificarCreacionJugador(bool creado)
+        {
+            throw new NotImplementedException();
+        }
+
         public void VerificarUsuarioLogeado(bool logeado)
         {
 

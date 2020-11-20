@@ -8,7 +8,7 @@
         Title="Memorama">
     <Grid Name="Main">
         <local:Login>
-            
+
         </local:Login>
     </Grid>
 </Window>

@@ -37,7 +37,7 @@ namespace Memorama.Vistas
             mainWindow.Width = 540;
             mainWindow.Height = 400;
 
-             mainWindow.Background = new SolidColorBrush();
+            mainWindow.Background = new SolidColorBrush();
             usuarioBackground[0] = new SolidColorBrush(Color.FromArgb(233, 108, 41, 239));
             usuarioBackground[1] = new SolidColorBrush(Color.FromArgb(233, 239, 41, 210));
             usuarioBackground[2] = new SolidColorBrush(Color.FromArgb(233, 73, 44, 130));

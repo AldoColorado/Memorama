@@ -36,17 +36,24 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="CrearJugador">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Modelo.Modelo" minOccurs="0" name="jugador" nillable="true" type="q4:Jugador" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="RecibirMensaje">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Memorama" minOccurs="0" name="mensaje" nillable="true" type="q4:Mensaje" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Memorama" minOccurs="0" name="mensaje" nillable="true" type="q5:Mensaje" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UsuariosConectados">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Modelo.Modelo" minOccurs="0" name="jugadores" nillable="true" type="q5:ArrayOfJugador" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Modelo.Modelo" minOccurs="0" name="jugadores" nillable="true" type="q6:ArrayOfJugador" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -54,6 +61,13 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="logeado" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarCreacionJugador">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="creado" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

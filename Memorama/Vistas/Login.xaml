@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         MinHeight="100" MinWidth="160"
         >
-    <Grid x:Name="Logiin" Tag="Login" Width="300" Height="200" Background="Gray">
-        <Grid HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="280" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+    <Grid x:Name="Logiin" Tag="Login" Width="300" Height="275" Background="#85C1E9">
+        <Grid HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="280" Background="#A2D9CE ">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" Margin="156,164,150,164" Width="209">
 
             </StackPanel>
@@ -17,8 +17,10 @@
             <PasswordBox x:Name="TextoPassword" HorizontalAlignment="Left" Height="23" Margin="94,57,0,0" VerticalAlignment="Top" Width="176"/>
         </Grid>
         <Label x:Name="LabelNickName" Content="NickName" HorizontalAlignment="Left" Margin="20,24,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="BotonCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="82,141,0,0" VerticalAlignment="Top" Width="75" Background="Red" IsCancel="True"/>
-        <Button x:Name="BotonAceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="179,141,0,0" VerticalAlignment="Top" Width="75" Background="Green"  IsDefault="True" Click="BotonAceptar_Click"/>
+        <Button x:Name="BotonCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="82,141,0,0" VerticalAlignment="Top" Width="75" Background="#3498DB" IsCancel="True"/>
+        <Button x:Name="BotonAceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="179,141,0,0" VerticalAlignment="Top" Width="75" Background="#3498DB"  IsDefault="True" Click="BotonAceptar_Click"/>
+        <Button Content="Olvidaste tu contraseña?"   Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="94,192,0,0" VerticalAlignment="Top" Width="136"/>
+        <Button Content="Registrarse" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent" Margin="118,217,0,0" VerticalAlignment="Top" Width="75" Click="BotonRegistrarse"/>
 
     </Grid>
 </UserControl>

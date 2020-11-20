@@ -78,11 +78,17 @@
     <Compile Include="Vistas\ChatLayout.xaml.cs">
       <DependentUpon>ChatLayout.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\ConfirmarRegistro.xaml.cs">
+      <DependentUpon>ConfirmarRegistro.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Registrarse.xaml.cs">
+      <DependentUpon>Registrarse.xaml</DependentUpon>
     </Compile>
     <Page Include="Vistas\ChatLayout.xaml">
       <SubType>Designer</SubType>
@@ -100,11 +106,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Vistas\ConfirmarRegistro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Vistas\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vistas\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Registrarse.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -60,6 +60,11 @@ namespace Host
         {
             bool usuarioLogueado = false;
             JugadorDAO usuarioALoguear = new JugadorDAO();
+
+            //string contraseniaEncriptada = string.Empty;
+            //byte[] encryted = System.Text.Encoding.Unicode.GetBytes(contrasenia);
+            //contraseniaEncriptada = Convert.ToBase64String(encryted);
+
             usuarioLogueado = usuarioALoguear.ValidarUsuario(nickName, contrasenia);
 
             if(usuarioLogueado)
@@ -73,6 +78,24 @@ namespace Host
             else
             {
                 Console.WriteLine("No paso Logeado");
+            }
+        }
+
+        public void CrearJugador(Jugador jugador)
+        {
+            bool creado = false;
+            JugadorDAO jugadorDAO = new JugadorDAO();
+            creado = jugadorDAO.Crear(jugador);
+
+            if(creado)
+            {
+                var conexion = OperationContext.Current.GetCallbackChannel<IClient>();
+                conexion.VerificarCreacionJugador(true);
+                Console.WriteLine("Jugador creado");
+            }
+            else
+            {
+                Console.WriteLine("No se creo");
             }
         }
 

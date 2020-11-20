@@ -38,6 +38,12 @@ namespace Memorama.Proxy {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IService/Login")]
         System.Threading.Tasks.Task LoginAsync(string nombre, string contrasenia);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IService/CrearJugador")]
+        void CrearJugador(Modelo.Modelo.Jugador jugador);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IService/CrearJugador")]
+        System.Threading.Tasks.Task CrearJugadorAsync(Modelo.Modelo.Jugador jugador);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -51,6 +57,9 @@ namespace Memorama.Proxy {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IService/VerificarUsuarioLogeado")]
         void VerificarUsuarioLogeado(bool logeado);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IService/VerificarCreacionJugador")]
+        void VerificarCreacionJugador(bool creado);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,6 +120,14 @@ namespace Memorama.Proxy {
         
         public System.Threading.Tasks.Task LoginAsync(string nombre, string contrasenia) {
             return base.Channel.LoginAsync(nombre, contrasenia);
+        }
+        
+        public void CrearJugador(Modelo.Modelo.Jugador jugador) {
+            base.Channel.CrearJugador(jugador);
+        }
+        
+        public System.Threading.Tasks.Task CrearJugadorAsync(Modelo.Modelo.Jugador jugador) {
+            return base.Channel.CrearJugadorAsync(jugador);
         }
     }
 }

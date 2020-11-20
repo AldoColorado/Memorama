@@ -25,16 +25,16 @@ namespace Memorama
         public Login()
         {
             InitializeComponent();
-            mainWindow = (MainWindow)Application.Current.MainWindow;
-            if(mainWindow != null)
-            {
-                mainWindow.Width = 540;
-                mainWindow.Height = 420;
-                mainWindow.MinWidth = 540;
-                mainWindow.MinHeight = 420;
-                mainWindow.MaxWidth = 540;
-                mainWindow.MaxHeight = 420;
-            }
+            //mainWindow = (MainWindow)Application.Current.MainWindow;
+            //if(mainWindow != null)
+            //{
+            //    mainWindow.Width = 540;
+            //    mainWindow.Height = 420;
+            //    mainWindow.MinWidth = 540;
+            //    mainWindow.MinHeight = 420;
+            //    mainWindow.MaxWidth = 540;
+            //    mainWindow.MaxHeight = 420;
+            //}
         }
 
         private void BotonAceptar_Click(object sender, RoutedEventArgs e)
@@ -50,9 +50,12 @@ namespace Memorama
             Proxy.ServiceClient servidor = new Proxy.ServiceClient(contexto);
 
             servidor?.Login(TextoNickName.Text, TextoPassword.Password);
+            
             servidor?.Conectarse(jugador);
             mainWindow.Main.Children.Clear();
             mainWindow.Main.Children.Add(mainWindow.mainView);
+            
+            
         }
 
         public void RecibirMensaje(Mensaje mensaje)
@@ -70,5 +73,16 @@ namespace Memorama
             this.Aceptado = true;
         }
 
+        private void BotonRegistrarse(object sender, RoutedEventArgs e)
+        {
+            Registrarse ventanaRegistro = new Registrarse();
+            ventanaRegistro.Show();
+            Window.GetWindow(this).Close();
+        }
+
+        public void VerificarCreacionJugador(bool creado)
+        {
+            //throw new NotImplementedException();
+        }
     }
 }

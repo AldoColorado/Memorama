@@ -22,6 +22,9 @@ namespace Host
 
         [OperationContract (IsOneWay = true)]
         void VerificarUsuarioLogeado(bool logeado);
+
+        [OperationContract(IsOneWay = true)]
+        void VerificarCreacionJugador(bool creado);
        
 
     }
@@ -41,6 +44,9 @@ namespace Host
 
         [OperationContract(IsOneWay = true)]
         void Login(String nombre, string contrasenia);
+
+        [OperationContract(IsOneWay = true)]
+        void CrearJugador(Jugador jugador);
 
     }
 }

@@ -11,7 +11,7 @@ namespace Modelo
     public abstract class AbstractCRUD <T>
     {
         protected MemoramaEntities db = new MemoramaEntities();
-        public abstract void Crear(T entity);
+        public abstract bool Crear(T entity);
         public abstract void Modificar(object entity);
         public abstract void Eliminar(object pk);
         public abstract List<T> Obtener();

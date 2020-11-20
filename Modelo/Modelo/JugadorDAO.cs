@@ -12,10 +12,23 @@ namespace Modelo
     {
        
 
-        public override void Crear(Jugador entity)
+        public override bool Crear(Jugador entity)
         {
-            db.Jugador.Add(entity);
-            db.SaveChanges();
+            bool creado = false;
+
+            try
+            {
+                db.Jugador.Add(entity);
+                db.SaveChanges();
+                creado = true;
+            }
+            catch (System.InvalidOperationException ex)
+            {
+                creado = false;
+                Console.WriteLine(ex.GetBaseException());
+            }
+
+            return creado;
         }
 
         public bool ValidarUsuario(string nickName, string contrasenia)
